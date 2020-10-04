@@ -1,10 +1,11 @@
 public class PPMain {
     public static void main(String[] args) throws
-        OutOfInkException, OutOfSpaceException {
+        OutOfInkException, OutOfSpaceException, ClosedPenException {
         
         Paper paper = new Paper();
-        Pen pen = new Pen();
+        AutoPen pen = new AutoPen();
 
+        pen.click();
         pen.write(paper, "Hello, world!");
         paper.show();
     }

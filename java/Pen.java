@@ -1,6 +1,6 @@
 public class Pen {
-    private int inkAmount;
-    private int inkCapacity;
+    protected int inkAmount;
+    protected int inkCapacity;
 
     public Pen(int inkCapacity) {
         this.inkAmount = inkCapacity;
@@ -20,7 +20,7 @@ public class Pen {
     }
 
     public void write(Paper paper, String message)
-        throws OutOfInkException, OutOfSpaceException {
+        throws OutOfInkException, OutOfSpaceException, ClosedPenException {
 
         if ( this.inkAmount == 0 ) {
             throw new OutOfInkException();
