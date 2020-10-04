@@ -23,8 +23,7 @@ public class Pen implements WritingUtencil {
         this.inkAmount = this.inkCapacity;
     }
 
-    public void write(Paper paper, String message)
-        throws OutOfInkException, OutOfSpaceException, ClosedPenException {
+    public void write(Paper paper, String message) throws WritingUtencilBaseException {
 
         if ( this.inkAmount == 0 ) {
             throw new OutOfInkException();

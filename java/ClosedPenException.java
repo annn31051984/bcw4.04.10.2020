@@ -1,1 +1,1 @@
-public class ClosedPenException extends Exception {}
+public class ClosedPenException extends WritingUtencilBaseException {}

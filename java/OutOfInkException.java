@@ -1,1 +1,1 @@
-public class OutOfInkException extends Exception {}
+public class OutOfInkException extends WritingUtencilBaseException {}

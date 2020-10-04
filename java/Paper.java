@@ -20,7 +20,7 @@ public class Paper {
         return this.symbols;
     }
 
-    public void addContent(String message) throws OutOfSpaceException {
+    public void addContent(String message) throws WritingUtencilBaseException {
         int total = this.content.length() + message.length();
 
         if ( this.content.length() == this.maxSymbols ) {

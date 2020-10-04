@@ -1,1 +1,1 @@
-public class OutOfSpaceException extends Exception {}
+public class OutOfSpaceException extends WritingUtencilBaseException {}
