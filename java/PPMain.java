@@ -3,6 +3,7 @@ public class PPMain {
         
         Paper paper = new Paper();
         AutoPen pen = new AutoPen();
+        TestPen tp = new TestPen();
 
         pen.click();
         pen.write(paper, "Hello, world!");
