@@ -1,4 +1,4 @@
-public class Pen {
+public class Pen implements WritingUtencil {
     protected int inkAmount;
     protected int inkCapacity;
 
@@ -19,6 +19,10 @@ public class Pen {
         return this.inkCapacity;
     }
 
+    public void refill() {
+        this.inkAmount = this.inkCapacity;
+    }
+
     public void write(Paper paper, String message)
         throws OutOfInkException, OutOfSpaceException, ClosedPenException {
 
@@ -32,9 +36,5 @@ public class Pen {
         }
         paper.addContent(message);
         this.inkAmount -= message.length();
-    }
-
-    public void refill() {
-        inkAmount = inkCapacity;
     }
 }
