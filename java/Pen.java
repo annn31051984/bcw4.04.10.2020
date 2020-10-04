@@ -1,14 +1,28 @@
-public class Pen extends WritingUtencil {
-    
+public class Pen implements WritingUtencil {
+    protected int inkAmount;
+    protected int inkCapacity;
+
     public Pen(int inkCapacity) {
-        super(inkCapacity);
+        this.inkAmount = inkCapacity;
+        this.inkCapacity = inkCapacity;
     }
 
     public Pen() {
         this(1024);
     }
 
-    @Override
+    public int getInkAmount() {
+        return this.inkAmount;
+    }
+
+    public int getInkCapacity() {
+        return this.inkCapacity;
+    }
+
+    public void refill() {
+        this.inkAmount = this.inkCapacity;
+    }
+
     public void write(Paper paper, String message)
         throws OutOfInkException, OutOfSpaceException, ClosedPenException {
 
